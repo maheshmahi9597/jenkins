@@ -1,3 +1,3 @@
 def call(){
-sh 'maven clean install'
+sh 'maven clean package'
 }
