@@ -1,3 +1,3 @@
 def call(){
-sh 'sudo apt update'
+sh 'python3 --version'
 }
