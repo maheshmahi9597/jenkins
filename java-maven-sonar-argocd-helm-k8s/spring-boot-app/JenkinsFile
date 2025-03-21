@@ -17,8 +17,8 @@ pipeline {
         sh 'ls -ltr'
         // build the project and create a JAR file
         sh 'cd java-maven-sonar-argocd-helm-k8s/spring-boot-app && mvn clean package'
-        docker build -t mahimani/spring-app-project:latest .
-docker push mahimani/spring-app-project:latest
+         sh 'docker build -t mahimani/spring-app-project:latest .'
+        sh 'docker push mahimani/spring-app-project:latest'
       }
     }
     stage('Static Code Analysis') {
